@@ -1618,6 +1618,7 @@ if ($action == 'create' && $usercancreate) {
 		print "<tr><td>".$langs->trans("DefaultContact").'</td><td>';
 		print img_picto('', 'contact');
 		print $form->selectcontacts($soc->id, $contactid, 'contactid', 1, $srccontactslist, '', 1);
+		print '<a href="'.DOL_URL_ROOT.'/contact/card.php?socid='.$socid.'&action=create&backtopage='.urlencode($_SERVER["PHP_SELF"].'?action=create&socid='.$socid).'" title="'.$langs->trans('NewContact').'"><span class="fa fa-plus-circle valignmiddle paddingleft"></span></a>';
 		print '</td></tr>';
 
 		// Ligne info remises tiers
