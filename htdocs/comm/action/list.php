@@ -248,7 +248,7 @@ if (empty($reshook) && !empty($massaction)) {
 
 	if (isset($percent)) {
 		foreach ($toselect as $toselectid) {
-			$result = $object->updatePercent($toselectid, $percent);
+			$result = $object->updatePercent($toselectid, $percent, $user->id);
 			if ($result < 0) {
 				dol_print_error($db);
 				break;
